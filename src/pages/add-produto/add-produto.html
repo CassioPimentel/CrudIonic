@@ -1,0 +1,62 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Produto</ion-title>
+
+    <ion-buttons end> 
+      <button ion-button (click)="closeModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <input type="hidden" [(ngModel)]="produto.productID" />
+
+  <ion-item>
+    <ion-label stacked>Name</ion-label>
+    <ion-input [(ngModel)]="produto.productName" type="text" placeholder="Fill yor first and last name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>City</ion-label>
+    <ion-input [(ngModel)]="produto.quantityPerUnit" type="text" placeholder="Fill your city"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Name</ion-label>
+    <ion-input [(ngModel)]="produto.unitPrice" type="text" placeholder="Fill yor first and last name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Address</ion-label>
+    <ion-input [(ngModel)]="produto.reorderLevel" type="text" placeholder="Fill your full address"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Phone</ion-label>
+    <ion-input [(ngModel)]="produto.unitsInStock" type="text" placeholder="Fill your phone number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>City</ion-label>
+    <ion-input [(ngModel)]="produto.unitsOnOrder" type="text" placeholder="Fill your city"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>City</ion-label>
+    <ion-input [(ngModel)]="produto.discontinued" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+          <button ion-button full (click)="addProduto(produto.productID,
+                                                      produto.productName, 
+                                                      produto.quantityPerUnit, 
+                                                      produto.unitPrice, 
+                                                      produto.reorderLevel,
+                                                      produto.unitsInStock,
+                                                      produto.unitsOnOrder,
+                                                      produto.discontinued)">Salvar</button>
+  </ion-item>
+
+</ion-content>

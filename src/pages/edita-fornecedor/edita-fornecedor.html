@@ -1,0 +1,86 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Fornecedor</ion-title>
+
+    <ion-buttons end> 
+      <button ion-button (click)="closeModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <input type="hidden" [(ngModel)]="fornecedor.supplierID" />
+
+  <ion-item>
+    <ion-label stacked>Company Name</ion-label>
+    <ion-input [(ngModel)]="fornecedor.companyName" type="text" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Contact Name</ion-label>
+    <ion-input [(ngModel)]="fornecedor.contactName" type="text" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Name</ion-label>
+    <ion-input [(ngModel)]="fornecedor.contactTitle" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Address</ion-label>
+    <ion-input [(ngModel)]="fornecedor.address" type="text" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>City</ion-label>
+    <ion-input [(ngModel)]="fornecedor.city" type="text" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Region</ion-label>
+    <ion-input [(ngModel)]="fornecedor.region" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Postal Code</ion-label>
+    <ion-input [(ngModel)]="fornecedor.postalCode" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Country</ion-label>
+    <ion-input [(ngModel)]="fornecedor.country" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Phone</ion-label>
+    <ion-input [(ngModel)]="fornecedor.phone" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Fax</ion-label>
+    <ion-input [(ngModel)]="fornecedor.fax" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Home Page</ion-label>
+    <ion-input [(ngModel)]="fornecedor.homePage" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+          <button ion-button full (click)="Editar(fornecedor.supplierID,
+                                                      fornecedor.companyName,
+                                                      fornecedor.contactName,
+                                                      fornecedor.contactTitle,
+                                                      fornecedor.address,
+                                                      fornecedor.city,
+                                                      fornecedor.region,
+                                                      fornecedor.postalCode,
+                                                      fornecedor.country,
+                                                      fornecedor.phone,
+                                                      fornecedor.fax,
+                                                      fornecedor.homePage)">Editar</button>
+  </ion-item>
+
+</ion-content>

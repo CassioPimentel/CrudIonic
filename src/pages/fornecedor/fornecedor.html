@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Fornecedores</ion-title>
+  
+  </ion-navbar>
+
+ 
+
+</ion-header>
+
+<ion-content>
+
+   <ion-fab top right edge>
+    <button ion-fab mini (click)="adicionarFornecedor()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  
+  <ion-list>
+
+    <ion-list>
+    <ion-item-sliding *ngFor="let fornecedor of fornecedores">
+      <ion-item>
+        <h2>{{fornecedor.companyName}}</h2>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="primary" icon-left (click)="editFornecedor(fornecedor)">
+          <ion-icon name="ios-create"></ion-icon>
+          Editar
+        </button>
+        <button ion-button color="danger" icon-left (click)="deleteFornecedor(fornecedor.supplierID)">
+          <ion-icon name="ios-trash"></ion-icon>
+          Deletar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  </ion-list>
+
+</ion-content>
